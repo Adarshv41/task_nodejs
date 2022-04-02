@@ -3,11 +3,6 @@ const User = require('../model/userModel');
 const jwt = require('jsonwebtoken');
 const argon2 = require('argon2');
 
-// function verifyToken(req, res, next){
-//     const token = req.header['authorization']
-//     token = token.split(' ')[1];
-// }
-
 router.post('/', async (req,res) => {
     try {
         const {fullName, email, password} = req.body;
@@ -33,24 +28,12 @@ router.post('/', async (req,res) => {
             fullName, email, password: passwordHash
         });
 
-        
-        //const saveUser = await newUser.save();
-        //newUser.save()
-        
-
-        // const accessToken = jwt.sign({
-        //     user: newUser._id
-        // }, process.env.ACCESS_TOKEN_SECRET);
-        // const refreshToken = jwt.sign({
-        //     user: newUser._id
-        // }, process.env.REFRESH_TOKEN_SECRET);
         res.status(200).json({message:'User created successfully'})
 
     }catch (e) {
         console.log(e);
     }
 })
-
 router.post('/login', async (req,res) => {
     try{
         const { email, password } = req.body;
