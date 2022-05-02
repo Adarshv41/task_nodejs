@@ -1,0 +1,53 @@
+.container {
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    padding: 100px ;
+    background-color:rgb(72, 209, 142);
+}
+
+.sub-container {
+    justify-content: center;
+    display: flex;
+    height: 500px;
+    width: 500px;
+    padding-top: 20px;
+    box-shadow: 10px 11px 12px 12px rgb(24, 106, 81);
+    border-radius: 50px;
+    background-color: rgb(240, 154, 199);
+
+}
+
+.form{
+    display: flex;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.form-group {
+    justify-content: center;
+    padding: 5px;
+}
+.form-control{
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+    
+}
+
+.label {
+    font-size: large;
+    font-weight: bold;
+    font-style: normal;
+}
+
+.submit{
+    justify-content: center;
+    font-size: larger;
+    border-radius: 10px;
+
+}
+
+.new-user {
+    padding-top: 80px;
+}
