@@ -3,8 +3,6 @@ const User = require('../model/userModel');
 const jwt = require('jsonwebtoken');
 const argon2 = require('argon2');
 
-
-
 router.post('/', async (req,res) => {
     try {
         const {fullName, email, password} = req.body;
@@ -35,7 +33,6 @@ router.post('/', async (req,res) => {
         console.log(e);
     }
 })
-
 router.post('/login', async (req,res) => {
     try{
         const { email, password } = req.body;
