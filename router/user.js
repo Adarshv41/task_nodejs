@@ -27,7 +27,6 @@ router.post('/', async (req,res) => {
         const newUser = User.create({
             fullName, email, password: passwordHash
         });
-
         res.status(200).json({message:'User created successfully'})
 
     }catch (e) {
